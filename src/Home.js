@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import Loadable from 'react-loadable';
 
-import "react-phone-number-input/rrui.css";
-import "react-phone-number-input/style.css";
 const PhoneAsync = Loadable({
-  loader: () => import("react-phone-number-input"),
+  loader: () => import("react-telephone-input"),
   loading: () => <span>Loading the phone number</span>
 });
 
@@ -16,11 +14,15 @@ class Home extends Component {
           placeholder="Start typing a phone number"
           value={"+445555555555"}
           onChange={mobile => null}
+          flagsImagePath="/flags.png"
+          defaultCountry="us"
         />
         <PhoneAsync
           placeholder="Start typing a phone number"
           value={"+44555555555"}
           onChange={mobile => null}
+          flagsImagePath="/flags.png"
+          defaultCountry="us"
         />
       </div>
     );
