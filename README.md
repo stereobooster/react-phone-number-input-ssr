@@ -13,5 +13,12 @@ yarn build
     5107 Jan 16 12:22 bundle.1bb261cb.js.map
 ```
 
-Todo need to fix sourcemaps
+TODO: need to fix sourcemaps https://github.com/jaredpalmer/razzle/issues/290#issuecomment-357935845
 
+```
+source-map-explorer build/public/static/js/bundle.1bb261cb.js
+Your source map only contains one source ( webpack:/webpack/bootstrap 6a97ef73520e2ab54233 )
+This typically means that your source map doesn't map all the way back to the original sources.
+This can happen if you use browserify+uglifyjs, for example, and don't set the --in-source-map flag to uglify.
+See  https://github.com/danvk/source-map-explorer/blob/master/README.md#generating-source-maps
+```
